@@ -1,5 +1,6 @@
 package com.adrian.taskPlanner;
 
+import com.adrian.taskPlanner.utilities.Configuration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
