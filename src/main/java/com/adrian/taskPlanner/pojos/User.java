@@ -4,6 +4,7 @@ import com.adrian.taskPlanner.utilities.Encrypt;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -12,16 +13,24 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String username;
-    @Convert(converter = Encrypt.class)
+    //TODO @Convert(converter = Encrypt.class)
     private String password;
     private LocalDate registerDate;
+    @OneToMany
+    @JoinColumn(name = "user_id")
+    private List<UserAccess> userAccess;
+
 
     private User(){}
 
-    private User(String username, String password, LocalDate registerDate){
+    public User(String username, String password, LocalDate registerDate){
         this.username = username;
         this.password = password;
         this.registerDate = registerDate;
+    }
+
+    public Integer getId(){
+        return this.id;
     }
 
     public String getUsername(){
@@ -36,4 +45,18 @@ public class User {
         return this.registerDate;
     }
 
+    public List<UserAccess> getUserAccess() {
+        return userAccess;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", registerDate=" + registerDate +
+                ", userAccess=" + userAccess +
+                '}';
+    }
 }

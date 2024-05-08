@@ -9,7 +9,7 @@
     <div class="background-image"></div>
     <div class="content">
         <p>
-        Hello everyone, the message is: <span th:text="${user.Password}"></span>
+        Hello everyone, my name is <span th:text="${user.Username}"/> and I'm part of the group <span th:text="${user.UserAccess[0].Group.Name}"/>
         </p>
     </div>
 </body>
