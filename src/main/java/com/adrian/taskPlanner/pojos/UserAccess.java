@@ -11,10 +11,10 @@ public class UserAccess {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "user_id")
     private User user;
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "group_id")
     private Group group;
     private LocalDate joinDate;
     @Column(columnDefinition = "boolean default false")

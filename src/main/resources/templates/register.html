@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/particles.css">
+    <link rel="icon" type="image/ico" href="favicon.ico">
+</head>
+<body class="no-overflow">
+    <span class="background-fill background-light-blue"></span>
+    <!--<div id="circles">
+        <div class="circle-container">
+            <div class="circle"></div>
+        </div>
+        <div class="circle-container">
+            <div class="circle"></div>
+        </div>
+        <div class="circle-container">
+            <div class="circle"></div>
+        </div>
+        <div class="circle-container">
+            <div class="circle"></div>
+        </div>
+        <div class="circle-container">
+            <div class="circle"></div>
+        </div>
+        <div class="circle-container">
+            <div class="circle"></div>
+        </div>
+        <div class="circle-container">
+            <div class="circle"></div>
+        </div>
+        <div class="circle-container">
+            <div class="circle"></div>
+        </div>
+        <div class="circle-container">
+            <div class="circle"></div>
+        </div>
+        <div class="circle-container">
+            <div class="circle"></div>
+        </div>
+
+    </div>-->
+    <div class="content">
+        <div class="horizontal-division">
+            <div class="left">
+                <img src="images/Planning.png">
+            </div>
+            <div class="right">
+                <h2>User Registration</h2>
+                <form id="registerForm" th:action="@{/register}" th:object="${userDTO}" method="post">
+                    <div class="errors">
+                        <p th:if="${error != null}" th:text="${error}" class="error">You must fill in an username</p>
+                        <p th:if="${#fields.hasErrors('username')}" th:class="${#fields.hasErrors('username')}? error">You must fill in an username</p>
+                        <p th:if="${#fields.hasErrors('password')}" th:class="${#fields.hasErrors('password')}? error">You must fill in a password</p>
+                    </div>
+                    <div>
+                        <label>Name</label>
+                        <input type="text" th:field="*{username}">
+                    </div>
+                    <div>
+                        <label>Password</label>
+                        <input type="password" th:field="*{password}">
+                    </div>
+                    <button type="submit">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function createCircles(){
+        var container = document.createElement("div");
+        container.setAttribute("id","circles");
+        var circleContainer = document.createElement("div");
+        circleContainer.setAttribute("class", "circle-container");
+        var circle = document.createElement("div");
+        circle.setAttribute("class", "circle");
+        circleContainer.appendChild(circle);
+        for(i=0;i<60;i++){
+            container.appendChild(circleContainer.cloneNode(true));
+        }
+        document.getElementsByTagName("body")[0].appendChild(container);
+    }
+    createCircles();
+</script>
+</html> 

@@ -1,6 +1,6 @@
 package com.adrian.taskPlanner;
 
-import com.adrian.taskPlanner.utilities.Configuration;
+import com.adrian.taskPlanner.utilities.WebConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -12,7 +12,7 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import java.util.Locale;
 
 @SpringBootApplication
-@EnableConfigurationProperties(Configuration.class)
+@EnableConfigurationProperties(WebConfiguration.class)
 public class TaskPlannerApplication {
 
 	public static void main(String[] args) {

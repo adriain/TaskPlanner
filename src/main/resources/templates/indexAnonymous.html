@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" type="image/ico" href="favicon.ico">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Planner</title>
+</head>
+<body>
+    <img class="background-image" src="images/SkyBackground.jpeg">
+    <div class="content overflow-bar">
+        <div class="app-title background-padded title-container">
+                <img draggable="false" class="task-title-image shadowed" src="images/TaskLogo.png"/>
+                <span class="shadowed">Task Planner</span>
+                <div sec:authorize="isAnonymous()" style="display: flex;">
+                        <button onclick="location.href = '/register';" class="authenticate-button">¡Regístrate!</button>
+                        <button onclick="location.href = '/login';" class="authenticate-button">¡Inicia Sesión!</button>
+                </div>
+                <div sec:authorize="isAuthenticated()" style="display: flex;">
+                    <button onclick="location.href = '/logout';" class="authenticate-button">Cerrar Sesión</button>
+                </div>
+        </div>
+        <div class="background-padded">
+            <h2>¿Qué es Task Planner?</h2>
+            <p>Task Planner es... <span sec:authorize="isAuthenticated()">Te llamas <span sec:authentication="principal.username"></span>?</span><br>
+                es...<br>
+                es...<br>
+                mmm...<br>
+                emm..
+            </p>
+        </div>
+    </div>
+</body>
+</html>
