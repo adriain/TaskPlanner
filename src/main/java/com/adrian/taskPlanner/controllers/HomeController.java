@@ -23,10 +23,8 @@ public class HomeController {
         return "indexAnonymous";
     }
 
-    @GetMapping("/hello")
-    public String hello(Model model){
-        User user = userRepository.findById(0).orElse(new User("Empty", "123", LocalDate.now()));
-        model.addAttribute("user", user);
-        return "hello";
+    @GetMapping("/header")
+    public String header(Model model){
+        return "header";
     }
 }

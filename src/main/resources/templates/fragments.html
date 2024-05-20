@@ -1,0 +1,16 @@
+<div th:fragment="header" class="header">
+    <img onclick="location.href = '/';" draggable="false" class="header-logo no-selectable" src="images/TaskLogo.png">
+    <div sec:authorize="isAuthenticated()" id="groups">
+        <button class="add-group">Add Group</button>
+    </div>
+    <div class="authentication-data">
+        <div class="credentials center-vertically" sec:authorize="isAuthenticated()">
+            <span class="center-vertically" sec:authentication="principal.username"></span>
+            <img class="profile-picture-header center-vertically" src="/images/profilePicture.png">
+        </div>
+        <div class="header-anonymous center-vertically" sec:authorize="isAnonymous()">
+            <button onclick="location.href = '/register';" class="header-authentication">Sign up</button>
+            <button onclick="location.href = '/login';" class="header-authentication">Log in</button>
+        </div>
+    </div>
+</div>
