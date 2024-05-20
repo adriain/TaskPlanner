@@ -29,6 +29,12 @@ public class User {
         this.registerDate = registerDate;
     }
 
+    public User(UserDTO userDTO){
+        this.username = userDTO.getUsername();
+        this.password = userDTO.getPassword();
+        this.registerDate = LocalDate.now();
+    }
+
     public Integer getId(){
         return this.id;
     }
