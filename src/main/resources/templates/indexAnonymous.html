@@ -8,14 +8,11 @@
 </head>
 <body>
     <img class="background-image" src="images/SkyBackground.jpeg">
+    <div th:replace="fragments.html :: header"></div>
     <div class="content overflow-bar">
         <div class="app-title background-padded title-container">
-                <img draggable="false" class="task-title-image shadowed" src="images/TaskLogo.png"/>
+                <img draggable="false" class="task-title-image shadowed no-selectable" src="images/TaskLogo.png"/>
                 <span class="shadowed">Task Planner</span>
-                <div sec:authorize="isAnonymous()" style="display: flex;">
-                        <button onclick="location.href = '/register';" class="authenticate-button">¡Regístrate!</button>
-                        <button onclick="location.href = '/login';" class="authenticate-button">¡Inicia Sesión!</button>
-                </div>
                 <div sec:authorize="isAuthenticated()" style="display: flex;">
                     <button onclick="location.href = '/logout';" class="authenticate-button">Cerrar Sesión</button>
                 </div>
