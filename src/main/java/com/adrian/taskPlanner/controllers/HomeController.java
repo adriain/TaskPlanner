@@ -22,9 +22,4 @@ public class HomeController {
     public String index(Model model){
         return "indexAnonymous";
     }
-
-    @GetMapping("/header")
-    public String header(Model model){
-        return "header";
-    }
 }
