@@ -1,0 +1,151 @@
+html {
+  font-size: 1rem;
+  font-family: monospace;
+}
+
+.background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  filter: blur(3px);
+}
+.background-fill {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat;
+}
+
+.background-light-blue {
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(218,218,255,1) 34%, rgba(171,241,255,1) 100%);
+}
+
+.content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  text-align: -webkit-center;
+  display: block;
+  height: 99%;
+}
+
+.overflow-bar {
+  overflow: auto;
+}
+
+.no-overflow {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e1fffd42;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #453f99;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #453f99;
+}
+
+.content > * {
+  margin: 2rem;
+}
+
+.title-container {
+  width: fit-content;
+}
+
+.app-title {
+  display: inline-grid;
+}
+
+.background-padded {
+  background-color: #d3f7ffab;
+  padding: 1rem 1rem;
+  border-radius: 2rem;
+  width: 80%;
+}
+
+.shadowed {
+  filter: drop-shadow(-4px 4px 7px black);
+}
+
+.app-title * {
+  justify-self: center;
+}
+
+.task-title-image {
+  height: 8rem;
+  margin-bottom: 1rem;
+}
+
+.authenticate-button {
+  font-size: 1rem;
+  background-color: #ffffff00;
+  border-radius: 0.5rem;
+  margin: 0.8rem;
+  height: 2.7rem;
+  justify-content: center;
+}
+
+.authenticate-button:hover {
+  background-color: #ffffff6e;
+}
+
+.error {
+  background-color: rgb(255, 184, 184);
+  color: rgb(102, 0, 0);
+  padding: 0.6rem;
+  border-radius: 2rem;
+  width: fit-content;
+}
+.horizontal-division {
+  display: flex;
+  justify-content: center;
+}
+.right {
+  padding: 5rem 6rem 4rem 4rem;
+  background: antiquewhite;
+  border-radius: 3rem;
+  margin-left: 5rem;
+}
+.left {
+  margin-top: 6rem;
+}
+
+#registerForm > div {
+  margin: 2rem;
+  width: 100%;
+  display: flex;
+}
+#registerForm label {
+  width: 6rem;
+  text-align-last: left;
+}
+.errors {
+  display: block !important;
+  text-align: left;
+  font-size: 0.8rem;
+}
