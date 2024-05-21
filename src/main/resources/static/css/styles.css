@@ -3,6 +3,62 @@ html {
   font-family: monospace;
 }
 
+.header {
+  width: 100%;
+  height: 3.5rem;
+  background-color: #d2e0e8e3;
+  left: 0;
+  position: absolute;
+  top: 0;
+  display: flex;
+  z-index: 999;
+  border-radius: 0 0 2rem 2rem;
+  padding-top: 0.5rem;
+}
+
+.header-logo {
+  margin-left: 2vw;
+  height: 3rem;
+}
+
+.add-group {
+  margin-left: 3vw;
+  height: 2rem;
+  width: 6rem;
+  position: absolute;
+  bottom: 0;
+  border-radius: 1rem 1rem 0 0;
+  border-bottom: none;
+}
+
+.authentication-data {
+  position: absolute;
+  right: 3vw;
+  height: 100%;
+  width: 8rem;
+  top: 0;
+}
+
+.credentials {
+  width: 100%;
+}
+
+.profile-picture-header {
+  height: 3rem;
+  right: 1vw;
+}
+
+.center-vertically {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.header-authentication {
+
+}
+
 .background-image {
   position: fixed;
   left: 0;
@@ -15,6 +71,7 @@ html {
   background-repeat: no-repeat;
   filter: blur(3px);
 }
+
 .background-fill {
   position: fixed;
   left: 0;
@@ -33,14 +90,14 @@ html {
 }
 
 .content {
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
-  top: 0;
+  top: 4rem;
   z-index: 100;
   text-align: -webkit-center;
   display: block;
-  height: 99%;
+  height: 30.9rem;
 }
 
 .overflow-bar {
@@ -49,6 +106,12 @@ html {
 
 .no-overflow {
   overflow: hidden;
+}
+
+.no-selectable{
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 ::-webkit-scrollbar {

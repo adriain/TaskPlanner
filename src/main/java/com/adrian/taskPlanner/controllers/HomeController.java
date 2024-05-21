@@ -22,11 +22,4 @@ public class HomeController {
     public String index(Model model){
         return "indexAnonymous";
     }
-
-    @GetMapping("/hello")
-    public String hello(Model model){
-        User user = userRepository.findById(0).orElse(new User("Empty", "123", LocalDate.now()));
-        model.addAttribute("user", user);
-        return "hello";
-    }
 }
