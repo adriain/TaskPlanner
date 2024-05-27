@@ -5,7 +5,7 @@ html {
 
 .header {
   width: 100%;
-  height: 3.5rem;
+  height: 8vh;
   background-color: #d2e0e8e3;
   left: 0;
   position: absolute;
@@ -18,7 +18,13 @@ html {
 
 .header-logo {
   margin-left: 2vw;
-  height: 3rem;
+  height: 6vh;
+}
+
+.header-authentication-button {
+  width: 10vw;
+  height: 4vh;
+  font-size: 0.7rem;
 }
 
 .add-group {
@@ -35,12 +41,15 @@ html {
   position: absolute;
   right: 3vw;
   height: 100%;
-  width: 8rem;
+  width: 25vw;
   top: 0;
 }
 
 .credentials {
   width: 100%;
+}
+.pre-wrap {
+  white-space: pre-wrap;
 }
 
 .profile-picture-header {
@@ -53,10 +62,6 @@ html {
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-}
-
-.header-authentication {
-
 }
 
 .background-image {
@@ -93,11 +98,11 @@ html {
   position: absolute;
   left: 0;
   right: 0;
-  top: 4rem;
+  top: 10vh;
   z-index: 100;
   text-align: -webkit-center;
   display: block;
-  height: 30.9rem;
+  height: 90vh;
 }
 
 .overflow-bar {
@@ -142,6 +147,10 @@ html {
 
 .app-title {
   display: inline-grid;
+}
+
+.title {
+  font-size: 2rem;
 }
 
 .background-padded {

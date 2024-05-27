@@ -12,18 +12,22 @@
     <div class="content overflow-bar">
         <div class="app-title background-padded title-container">
                 <img draggable="false" class="task-title-image shadowed no-selectable" src="images/TaskLogo.png"/>
-                <span class="shadowed">Task Planner</span>
+                <span class="shadowed title">Task Planner</span>
                 <div sec:authorize="isAuthenticated()" style="display: flex;">
                     <button onclick="location.href = '/logout';" class="authenticate-button">Cerrar Sesión</button>
                 </div>
         </div>
         <div class="background-padded">
-            <h2>¿Qué es Task Planner?</h2>
-            <p>Task Planner es... <span sec:authorize="isAuthenticated()">Te llamas <span sec:authentication="principal.username"></span>?</span><br>
-                es...<br>
-                es...<br>
-                mmm...<br>
-                emm..
+            <h2>What is Task Planner?</h2>
+            <p class="pre-wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet, ante id imperdiet imperdiet, ipsum purus rhoncus urna, eu vulputate eros velit ut sapien.
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque congue tincidunt massa vel hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
+                
+Duis gravida quam sed nibh auctor, sit amet ullamcorper ex sagittis. Cras nec rutrum risus, a commodo mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                
+Suspendisse et velit cursus, feugiat libero et, varius arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
+                
+Suspendisse auctor malesuada velit, quis tempor neque rutrum eu.
             </p>
         </div>
     </div>
