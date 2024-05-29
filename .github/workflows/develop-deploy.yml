@@ -9,7 +9,7 @@ on:
 jobs:
 
   build:
-
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
@@ -30,3 +30,8 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: adrgrabar/task-planner:develop
+      - name: Deploy
+        env:
+          deploy_url: ${{ secrets.RENDER_DEPLOY_HOOK_URL_DEV }}
+        run: |
+          curl "$deploy_url"
